@@ -1,0 +1,165 @@
+body,
+html {
+  height: auto !important;
+  &.no-scroll {
+    overflow-y: hidden !important;
+    height: 100% !important;
+  }
+  &.no-scroll-initial {
+    overflow: hidden !important;
+    height: auto !important;
+  }
+}
+
+html.disable-scrolling {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+
+  @include when-inside('.disable-scrolling') {
+    overflow: visible;
+  }
+}
+
+.is-mobile {
+  display: block;
+  @include respond-min(1024) {
+    display: none;
+  }
+}
+
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.show-in-mob {
+  display: block !important;
+  @include respond-to(md) {
+    display: none !important;
+  }
+}
+
+.hide-in-mob {
+  display: none !important;
+  @include respond-to(md) {
+    display: block !important;
+  }
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.animated {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: perspective(1px) translate3d(0, 0, 0);
+  transform: perspective(1px) translate3d(0, 0, 0);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include hover-scale;
+  }
+}
+
+/* Scroll reveal */
+.is-observer {
+  .reveal-slide {
+    opacity: 0;
+    transform: translateY(40px);
+    @include transition-reveal;
+  }
+
+  .reveal-slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    @include transition-reveal;
+  }
+
+  .reveal-slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    @include transition-reveal;
+  }
+
+  .reveal-fade {
+    opacity: 0;
+    @include transition-reveal(opacity);
+  }
+
+  .is-visible {
+    &.reveal-del-1,
+    .reveal-del-1 {
+      transition-delay: 0.4s;
+    }
+    &.reveal-del-2,
+    .reveal-del-2 {
+      transition-delay: 0.7s;
+    }
+    &.reveal-del-3,
+    .reveal-del-3 {
+      transition-delay: 1s;
+    }
+    &.reveal-del-4,
+    .reveal-del-4 {
+      transition-delay: 1.3s;
+    }
+
+    .reveal-slide,
+    &.reveal-slide {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-slide-right,
+    &.reveal-slide-right,
+    .reveal-slide-left,
+    &.reveal-slide-left {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-fade,
+    &.reveal-fade {
+      opacity: 1;
+    }
+  }
+}

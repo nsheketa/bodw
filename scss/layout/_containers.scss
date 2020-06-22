@@ -1,0 +1,14 @@
+.main-container {
+  max-width: 100%;
+  padding: 0 25px;
+  @include center();
+
+  @include respond-to(lg) {
+    max-width: $max-width;
+  }
+}
+
+.main-container--fluid {
+  width: 100%;
+  padding: 0 25px;
+}

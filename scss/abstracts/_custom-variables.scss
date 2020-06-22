@@ -1,0 +1,71 @@
+/// Font families
+$Source: 'Source Sans Pro', sans-serif;
+$Arial: 'Arial', sans-serif;
+
+/// Base font family
+$baseFontFamily: $Source;
+$titleFontFamily: $Source;
+
+/// Base font size (rem), line height and letter spacing
+@mixin font-size($size: 20) {
+  font-size: $size * 1px;
+  font-size: ($size / $baseFontSize) * 1rem;
+}
+
+$baseFontSize: 20;
+$baseFontSizePixel: $baseFontSize * 1px;
+
+$baseLineHeight: 1.3;
+$baseLetterSpacing: 0;
+
+/// Colors
+$textColor: #fff !default;
+$bodyBackground: #2D2E87;
+
+$blueColor: #2D2E87;
+$redColor: #E5005B;
+$darkBlueColor: #34175C;
+$whiteColor: #fff;
+$lightPurpleColor: #67207A;
+
+$radius: 4px;
+/// spacing gap
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1440px !default; //1215 + 20px + 20px
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'xs': screen and
+    (
+      min-width: 572px
+    ),
+  'sm': screen and
+    (
+      min-width: 768px
+    ),
+  'md': screen and
+    (
+      min-width: 1024px
+    ),
+  'lg': screen and
+    (
+      min-width: 1280px
+    ),
+  'xl': screen and
+    (
+      min-width: 1440px
+    ),
+  'xxl': screen and
+    (
+      min-width: 1920px
+    )
+) !default;
+
+/// defaul images and fonts location
+$fontsUrl: '../fonts/';
+$imgUrl: '../img/';

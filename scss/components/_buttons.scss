@@ -1,0 +1,39 @@
+/*-------------Button-----------------*/
+.btn {
+  display: inline-flex;
+  @include ai-flex-center;
+  @include jc-flex-center;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  @include transition-04;
+  position: relative;
+  outline: none !important;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.875rem;
+  border: 2px solid;
+  color: #fff;
+
+  &--red{
+    background-color: $redColor;
+    border-color: $redColor;
+
+    @include on-event{
+      background-color: #fff;
+      color: $redColor;
+    }
+  }
+  &--purple-light{
+    background-color: $lightPurpleColor;
+    border-color: $lightPurpleColor;
+    @include on-event{
+      background-color: #fff;
+      color: $lightPurpleColor;
+    }
+  }
+
+  @include respond-to(md){
+    font-size: 1rem;
+  }
+}

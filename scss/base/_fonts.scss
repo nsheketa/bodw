@@ -1,0 +1,80 @@
+@import "../abstracts/custom-variables";
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('#{$fontsUrl}SourceSansPro-SemiBold.eot');
+  src: url('#{$fontsUrl}SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}SourceSansPro-SemiBold.woff2') format('woff2'),
+  url('#{$fontsUrl}SourceSansPro-SemiBold.woff') format('woff'),
+  url('#{$fontsUrl}SourceSansPro-SemiBold.ttf') format('truetype'),
+  url('#{$fontsUrl}SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('#{$fontsUrl}SourceSansPro-Bold.eot');
+  src: url('#{$fontsUrl}SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}SourceSansPro-Bold.woff2') format('woff2'),
+  url('#{$fontsUrl}SourceSansPro-Bold.woff') format('woff'),
+  url('#{$fontsUrl}SourceSansPro-Bold.ttf') format('truetype'),
+  url('#{$fontsUrl}SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('#{$fontsUrl}SourceSansPro-Light.eot');
+  src: url('#{$fontsUrl}SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}SourceSansPro-Light.woff2') format('woff2'),
+  url('#{$fontsUrl}SourceSansPro-Light.woff') format('woff'),
+  url('#{$fontsUrl}SourceSansPro-Light.ttf') format('truetype'),
+  url('#{$fontsUrl}SourceSansPro-Light.svg#SourceSansPro-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('#{$fontsUrl}SourceSansPro-ExtraLight.eot');
+  src: url('#{$fontsUrl}SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}SourceSansPro-ExtraLight.woff2') format('woff2'),
+  url('#{$fontsUrl}SourceSansPro-ExtraLight.woff') format('woff'),
+  url('#{$fontsUrl}SourceSansPro-ExtraLight.ttf') format('truetype'),
+  url('#{$fontsUrl}SourceSansPro-ExtraLight.svg#SourceSansPro-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('#{$fontsUrl}SourceSansPro-Regular.eot');
+  src: url('#{$fontsUrl}SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}SourceSansPro-Regular.woff2') format('woff2'),
+  url('#{$fontsUrl}SourceSansPro-Regular.woff') format('woff'),
+  url('#{$fontsUrl}SourceSansPro-Regular.ttf') format('truetype'),
+  url('#{$fontsUrl}SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('#{$fontsUrl}SourceSansPro-Black.eot');
+  src: url('#{$fontsUrl}SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}SourceSansPro-Black.woff2') format('woff2'),
+  url('#{$fontsUrl}SourceSansPro-Black.woff') format('woff'),
+  url('#{$fontsUrl}SourceSansPro-Black.ttf') format('truetype'),
+  url('#{$fontsUrl}SourceSansPro-Black.svg#SourceSansPro-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+

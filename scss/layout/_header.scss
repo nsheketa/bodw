@@ -1,0 +1,345 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: $bodyBackground;
+  padding: 12px 0;
+
+  .main-container {
+    width: 100%;
+    position: relative;
+  }
+  font-size: 0.75rem;
+
+  @include respond-to(lg) {
+    font-size: 0.9rem;
+  }
+  @include respond-to(xl) {
+    font-size: 1rem;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__inner-mob {
+  @include respond-max(1023) {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    overflow: auto;
+    padding: 20px 20px 70px;
+    background-color: $bodyBackground;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    @include transition-custom;
+    &.is-active{
+      opacity: 1;
+      visibility: visible;
+      z-index: 100;
+      transform: translateX(0);
+    }
+  }
+  @include respond-to(md) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 142px;
+  img {
+    width: 100%;
+  }
+}
+
+.header-nav {
+  li {
+    position: relative;
+    margin: 10px 0;
+    @include on-event {
+      & > a {
+        color: $redColor;
+      }
+    }
+    a {
+      display: inline-block;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $whiteColor;
+      @include transition-04;
+    }
+    ul {
+      display: block;
+    }
+    li {
+      display: block;
+      margin-left: 20px;
+      @include on-event {
+        & > a {
+          color: $redColor;
+        }
+      }
+      a{
+        font-weight: normal;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    margin-left: auto;
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    li {
+      margin: 0 6px;
+      @include on-event {
+        & > a {
+          color: $redColor;
+        }
+        ul {
+          opacity: 1;
+          visibility: visible;
+          z-index: 2;
+          transform: translateY(0px);
+          a {
+            color: $whiteColor;
+          }
+        }
+      }
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 10px;
+        min-width: 200px;
+        background-color: $bodyBackground;
+        @include header-shadow;
+        transform-origin: top;
+        @include transition-04;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transform: translateY(10px);
+      }
+      li {
+        padding: 5px 12px;
+        margin: 0;
+        @include transition-04;
+        @include on-event {
+          background-color: $darkBlueColor;
+          a {
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to(lg) {
+    li {
+      margin: 0 10px;
+    }
+  }
+  @include respond-to(xl) {
+    li {
+      margin: 0 16px;
+    }
+  }
+}
+
+.header-buy__btn {
+  display: block;
+  white-space: nowrap;
+  padding: 7px 20px;
+  background-color: $redColor;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $whiteColor;
+  border: 2px solid $redColor;
+  @include transition-04;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  max-width: 140px;
+  text-align: center;
+  @include on-event {
+    color: $redColor;
+    background-color: #fff;
+  }
+  @include respond-to(md) {
+    font-size: 0.7rem;
+    margin: 0 6px;
+    max-width: none;
+  }
+  @include respond-to(lg) {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+}
+
+.header-search__link {
+  display: block;
+  margin-left: auto;
+
+  svg {
+    display: block;
+    width: 20px;
+    path {
+      @include transition-04;
+    }
+  }
+  @include on-event {
+    svg path {
+      fill: $redColor !important;
+    }
+  }
+  @include respond-to(md) {
+    margin: 0 6px;
+  }
+  @include respond-to(lg) {
+    margin: 0 10px;
+    svg {
+      width: 28px;
+    }
+  }
+}
+
+.header-lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $whiteColor;
+  text-transform: uppercase;
+  margin-top: 10px;
+  span {
+    cursor: pointer;
+    color: inherit;
+    margin-right: 10px;
+    @include transition-04;
+    @include on-event {
+      color: $redColor;
+    }
+  }
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 10px;
+      @include on-event {
+        a {
+          color: $redColor;
+        }
+      }
+    }
+  }
+  a {
+    color: inherit;
+    @include transition-04;
+  }
+  @include respond-to(md) {
+    margin-left: 10px;
+    margin-top: 0;
+    @include on-event {
+      & > a {
+        color: $redColor;
+      }
+      ul {
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+        transform: translateY(0px);
+      }
+    }
+    span {
+      margin-right: 0;
+      font-weight: bold;
+    }
+    ul {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      margin: auto;
+      margin-top: 10px;
+      background-color: $bodyBackground;
+      width: calc(100% + 20px);
+      @include header-shadow;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      transform: translateY(10px);
+      @include transition-04;
+      li {
+        display: block;
+        padding: 5px 10px;
+        margin: 0;
+        @include transition-04;
+        @include on-event {
+          background-color: $darkBlueColor;
+          a {
+            color: $whiteColor;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header__hamburger {
+  display: block;
+  @include transition-04;
+  position: relative;
+  margin-left: 20px;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  z-index: 100;
+  .line {
+    width: 34px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin: 7px auto;
+    @include transition(0.4s all ease);
+    @include transform-origin(right);
+    position: relative;
+  }
+
+  &.is-active {
+    .line {
+      background-color: #fff;
+      &:nth-child(1) {
+        transform: translate(-4px, 22px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-15px);
+      }
+      &:nth-child(3) {
+        transform: translate(-5px, -22px) rotate(-45deg);
+      }
+    }
+  }
+
+  @include on-event() {
+    .line {
+      //background-color: #fff;
+    }
+  }
+  @include respond-to(md) {
+    display: none;
+  }
+}

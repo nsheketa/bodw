@@ -1,0 +1,229 @@
+.speakers {
+  padding-top: 82px;
+  padding-bottom: 112px;
+  overflow: hidden;
+}
+
+.speakers__inner {
+  max-width: 1169px;
+  @include center;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+.speakers-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1076px;
+  @include center;
+  padding-bottom: 54px;
+  z-index: 1;
+}
+
+.speakers-list__item {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  @include on-event {
+    .speakers-list__item-img {
+      img {
+        transform: scale(1.05, 1.05);
+      }
+    }
+    .speakers-list__item-content {
+      background-color: rgba(#000, 0.85);
+    }
+  }
+  @include respond-to(xs) {
+    width: 50%;
+    max-width: 50%;
+  }
+  @include respond-to(md) {
+    width: 33.33%;
+    max-width: 33.33%;
+  }
+  @include respond-to(xl) {
+    width: 25%;
+    max-width: 25%;
+  }
+}
+
+.speakers-list__item--ad {
+  @include on-event {
+    .speakers-list__item-img {
+      img {
+        transform: scale(1, 1);
+      }
+    }
+    .speakers-list__item-content {
+      background-color: transparent;
+      p {
+        font-size: 1.15rem;
+        transform: translateZ(0);
+        @include respond-to(md) {
+          font-size: 1.35rem;
+        }
+        @include respond-to(xl) {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}
+
+.speakers-list__item-inner {
+  position: relative;
+  width: 100%;
+}
+
+.speakers-list__item-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+
+  img {
+    @include imageCover;
+    @include transition-04;
+    filter: grayscale(1);
+
+    @include when-inside('.speakers-list__item--ad') {
+      filter: none;
+    }
+  }
+}
+
+.speakers-list__item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(#000, 0.5);
+  padding: 14px 20px;
+  @include transition-04;
+  p {
+    @include transition-04;
+    color: #fff;
+    &:first-of-type {
+      font-weight: bold;
+    }
+    &:last-of-type {
+      font-size: 90%;
+    }
+  }
+
+  @include when-inside('.speakers-list__item--ad') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    @include square(100%);
+    p {
+      font-size: 1.1rem;
+      font-weight: bold;
+      line-height: 1.1;
+      text-transform: uppercase;
+      transform-origin: center;
+      text-align: center;
+
+      @include respond-to(md) {
+        font-size: 1.3rem;
+      }
+      @include respond-to(xl) {
+        font-size: 1.65rem; //33
+      }
+    }
+  }
+}
+
+.speakers__btn{
+  width: 100%;
+  max-width: 100%;
+  margin-top: 46px;
+
+  .btn{
+    width: 204px;
+    height: 44px;
+    border-radius: $radius;
+  }
+}
+
+/*INFO PART*/
+
+.speakers-info{
+  position: relative;
+  max-width: 1076px;
+  @include center;
+  padding-bottom: 55px;
+  h4{
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+  }
+  p{
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 796px;
+    z-index: 1;
+  }
+}
+
+.speakers-info__bg{
+  position: absolute;
+  bottom: 0;
+  left: -95px;
+  padding-bottom: 300%;
+  width: 1067px;
+  @include shadow-lg;
+  background: rgb(57,22,92); /* Old browsers */
+  background: -moz-linear-gradient(215deg, rgba(57,22,92,1) 0%, rgba(228,1,91,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(215deg, rgba(57,22,92,1) 0%,rgba(228,1,91,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(215deg, rgba(57,22,92,1) 0%,rgba(228,1,91,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39165c', endColorstr='#e4015b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  z-index: 0;
+  @include respond-to(sm){
+    padding-bottom: 100%;
+  }
+}
+
+.speakers-info__form{
+  position: relative;
+  z-index: 1 ;
+}
+
+.speakers-info__form-row{
+  display: flex;
+  height: 40px;
+  max-width: 620px;
+  input{
+    display: block;
+    height: 100%;
+    padding: 12px 23px;
+    font-family: $Arial;
+    font-size: 14px;
+    color: $darkBlueColor;
+    border: 1px solid $darkBlueColor;
+    width: calc(100% - 134px);
+    @include input-placeholder{
+      font-size: inherit;
+      color: $darkBlueColor;
+    }
+  }
+  button{
+    background-color: #50257F;
+    border-color: #50257F;
+    width: 120px;
+    margin-left: 14px;
+    border-radius: $radius;
+    color: #fff;
+
+    @include on-event{
+      background-color: #fff;
+      color: #50257F;
+    }
+  }
+}
