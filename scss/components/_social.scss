@@ -1,0 +1,40 @@
+.social-section{
+  padding: 40px 0;
+  background-color: #2E2E88;
+}
+
+.social-section__inner{
+  max-width: 896px;
+  @include center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social-section__item{
+  display: block;
+  height: 25px;
+
+  @include on-event{
+    svg{
+      fill: $redColor !important;
+      path{
+        fill: $redColor !important;
+      }
+    }
+  }
+  svg{
+    display: block;
+    width: auto;
+    height: 100%;
+    fill: #fff;
+    @include transition-04;
+    path{
+      fill: #fff;
+      @include transition-04
+    }
+  }
+  @include respond-to(md){
+    height: 42px;
+  }
+}

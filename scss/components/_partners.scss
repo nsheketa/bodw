@@ -1,0 +1,25 @@
+.partners{
+  background-color: #fff;
+  padding: 53px 20px 43px;
+}
+
+.partners__inner{
+  max-width: 1188px;
+  @include center;
+
+  h4{
+    margin-bottom: 15px;
+    color: #34175C;
+  }
+}
+
+.parnters__carousel-item{
+  padding: 0 15px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  img{
+
+  }
+}
