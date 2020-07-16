@@ -1,15 +1,19 @@
 .home-hero{
-  margin-top: 96px;
+  margin-top: 90px;
 }
 
 .home-hero__carousel-media{
   position: relative;
-  padding-bottom: 62.5%;
+  //padding-bottom: 62.5%;
   img{
-    @include imageCover;
+    width: 100%;
+    //@include imageCover;
   }
   @include respond-to(md){
     padding-bottom: 0;
-    height: calc(100vh - 96px);
+    //height: calc(100vh - 96px);
+    img{
+      width: 100%;
+    }
   }
 }

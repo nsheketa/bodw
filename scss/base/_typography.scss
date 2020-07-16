@@ -37,7 +37,7 @@ h3,
 .h3 {
   font-size: 1.5rem;
   line-height: 1.2;
-  font-family: $titleFontFamily;
+  font-family: $subTitleFontFamily;
   font-weight: normal;
   @include respond-to(md) {
     font-size: 2.5rem;
@@ -51,7 +51,7 @@ h4,
 .h4 {
   font-size: 1.2rem;
   line-height: 1.325;
-  font-family: $titleFontFamily;
+  font-family: $subTitleFontFamily;
   font-weight: normal;
   @include respond-to(md) {
     font-size: 1.5rem;
@@ -79,7 +79,7 @@ p {
     font-size: 1.1rem;
 
     @include respond-to(md) {
-      font-size: 1.2rem;
+      font-size: 1.2rem; //24
     }
   }
 }

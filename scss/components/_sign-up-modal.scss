@@ -1,0 +1,87 @@
+.sign-up-modal {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 90px);
+  background-color: $blueColor;
+  box-shadow: inset 0 3px 6px rgba(#000, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transform: translateX(100%);
+  @include transition-custom;
+  overflow: auto;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    transform: translateX(0%);
+  }
+}
+
+.sign-up-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 0;
+  @include square(20px);
+  @include transition-04;
+  transform: translateZ(0);
+  svg {
+    fill: #fff;
+    @include square(100%);
+  }
+  @include on-event {
+    transform: scale(1.1);
+  }
+
+  @include respond-to(xl) {
+    top: 54px;
+    right: 60px;
+    @include square(30px);
+  }
+}
+
+.sign-up-modal__inner {
+  @include square(100%);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  .main-container {
+    width: 100%;
+  }
+  h3 {
+    max-width: 700px;
+    margin-bottom: 40px;
+    @include respond-to(xl) {
+      max-width: 1400px;
+      margin-bottom: 74px;
+    }
+  }
+}
+
+.sign-up-modal__form {
+  max-width: 429px;
+}
+
+.sign-up-modal__form-row {
+  label {
+
+  }
+  input {
+    color: $lightPurpleColor;
+    @include input-placeholder {
+      color: $lightPurpleColor;
+    }
+  }
+  .form__checkbox-wrap {
+    font-size: 0.7rem //14;
+  }
+}
+

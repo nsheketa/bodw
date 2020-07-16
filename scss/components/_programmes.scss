@@ -76,6 +76,11 @@
   display: block;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  @include on-event{
+    figcaption{
+      background-color: rgba(#000, 0.5);
+    }
+  }
 
   figure {
     position: relative;
@@ -83,11 +88,21 @@
   }
   img {
     width: 100%;
+    box-shadow: 0 2px 7px rgba(#000, 1);
   }
   figcaption {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    background-color: rgba(#000, 0.3);
     text-align: center;
     color: #fff;
-    padding: 0 5px;
+    padding: 9px 12px;
+    @include transition-04;
+    p{
+      font-size: 0.9rem;
+    }
   }
   @include respond-to(sm) {
     width: 33.33%;

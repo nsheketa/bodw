@@ -5,6 +5,7 @@ $Arial: 'Arial', sans-serif;
 /// Base font family
 $baseFontFamily: $Source;
 $titleFontFamily: $Source;
+$subTitleFontFamily: $Source;
 
 /// Base font size (rem), line height and letter spacing
 @mixin font-size($size: 20) {

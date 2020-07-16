@@ -30,7 +30,7 @@
 .header__inner-mob {
   @include respond-max(1023) {
     position: fixed;
-    top: 96px;
+    top: 90px;
     left: 0;
     right: 0;
     bottom: 0px;
@@ -42,7 +42,7 @@
     visibility: hidden;
     transform: translateX(100%);
     @include transition-custom;
-    &.is-active{
+    &.is-active {
       opacity: 1;
       visibility: visible;
       z-index: 100;
@@ -58,7 +58,7 @@
 
 .header__logo {
   display: block;
-  width: 142px;
+  width: 62px;
   img {
     width: 100%;
   }
@@ -67,13 +67,23 @@
 .header-nav {
   li {
     position: relative;
-    margin: 10px 0;
-    @include on-event {
-      & > a {
-        color: $redColor;
+    margin: 10px 0 20px;
+    & > a {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -25px;
+        top: 1px;
+        border: 1px solid #fff;
+        border-top: none;
+        border-right: none;
+        @include square(10px);
+        transform: rotate(-45deg);
       }
     }
     a {
+      position: relative;
       display: inline-block;
       font-weight: bold;
       text-transform: uppercase;
@@ -81,19 +91,19 @@
       @include transition-04;
     }
     ul {
-      display: block;
+      display: none;
+      padding-top: 10px;
     }
     li {
       display: block;
-      margin-left: 20px;
-      @include on-event {
-        & > a {
-          color: $redColor;
-        }
-      }
-      a{
+      margin-bottom: 10px;
+      a {
         font-weight: normal;
         white-space: nowrap;
+        text-transform: none;
+        &:after {
+          display: none;
+        }
       }
     }
   }
@@ -106,10 +116,12 @@
     }
     li {
       margin: 0 6px;
-      @include on-event {
-        & > a {
-          color: $redColor;
+      a {
+        &:after {
+          display: none;
         }
+      }
+      @include on-event {
         ul {
           opacity: 1;
           visibility: visible;
@@ -121,10 +133,12 @@
         }
       }
       ul {
+        display: block !important;
         position: absolute;
         top: 100%;
         left: 0;
         margin-top: 10px;
+        padding: 0;
         min-width: 200px;
         background-color: $bodyBackground;
         @include header-shadow;
@@ -143,6 +157,8 @@
           background-color: $darkBlueColor;
           a {
             color: $whiteColor;
+            text-transform: uppercase;
+            text-transform: uppercase;
           }
         }
       }
@@ -164,6 +180,7 @@
   display: block;
   white-space: nowrap;
   padding: 7px 20px;
+  margin-top: 40px;
   background-color: $redColor;
   text-transform: uppercase;
   font-weight: bold;
@@ -174,18 +191,17 @@
   border-radius: 2px;
   max-width: 140px;
   text-align: center;
-  @include on-event {
-    color: $redColor;
-    background-color: #fff;
-  }
   @include respond-to(md) {
     font-size: 0.7rem;
-    margin: 0 6px;
+    margin: 0 15px 0 50px;
     max-width: none;
   }
   @include respond-to(lg) {
-    margin: 0 10px;
+    margin: 0 24px 0 60px;
     font-size: 0.9rem;
+  }
+  @include respond-to(xl) {
+    margin-left: 72px;
   }
 }
 
@@ -198,11 +214,6 @@
     width: 20px;
     path {
       @include transition-04;
-    }
-  }
-  @include on-event {
-    svg path {
-      fill: $redColor !important;
     }
   }
   @include respond-to(md) {
@@ -218,30 +229,56 @@
 
 .header-lang {
   position: relative;
-  display: flex;
-  align-items: center;
   color: $whiteColor;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-left: 20px;
+
+  @include on-event {
+    ul {
+      opacity: 1;
+      visibility: visible;
+      z-index: 100;
+      transform: translateY(0px);
+    }
+  }
+
   span {
     cursor: pointer;
     color: inherit;
-    margin-right: 10px;
-    @include transition-04;
-    @include on-event {
-      color: $redColor;
+    @include respond-max(1023) {
+      font-size: 20px;
     }
+    @include transition-04;
+
   }
   ul {
-    display: flex;
-
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    margin: auto;
+    background-color: $bodyBackground;
+    width: calc(100% + 20px);
+    @include header-shadow;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transform: translateY(10px);
+    @include transition-04;
     li {
-      margin: 0 10px;
+      display: block;
+      padding: 5px 10px;
+      margin: 0;
+      @include transition-04;
+      text-align: center;
       @include on-event {
+        background-color: $darkBlueColor;
         a {
-          color: $redColor;
+          color: $whiteColor;
+          white-space: nowrap;
         }
       }
+
     }
   }
   a {
@@ -252,9 +289,6 @@
     margin-left: 10px;
     margin-top: 0;
     @include on-event {
-      & > a {
-        color: $redColor;
-      }
       ul {
         opacity: 1;
         visibility: visible;
