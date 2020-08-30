@@ -13,6 +13,8 @@
   transform: translateX(100%);
   @include transition-custom;
   overflow: auto;
+  @include scrollbar;
+
 
   &.is-active {
     opacity: 1;
@@ -52,6 +54,7 @@
   @include square(100%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   overflow: auto;
   .main-container {
     width: 100%;

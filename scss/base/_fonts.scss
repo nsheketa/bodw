@@ -1,4 +1,12 @@
 @import "../abstracts/custom-variables";
+@import url(//db.onlinewebfonts.com/c/59fc2a88361f7edf2d750209902cfe59?family=TitularW00-Black);
+///https://www.onlinewebfonts.com/download/59fc2a88361f7edf2d750209902cfe59
+
+@font-face {
+  font-family: "TitularW00-Black";
+  src: url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.eot");
+  src: url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.woff") format("woff"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.svg#TitularW00-Black") format("svg");
+}
 
 @font-face {
   font-family: 'Source Sans Pro';
@@ -74,6 +82,19 @@
   url('#{$fontsUrl}SourceSansPro-Black.ttf') format('truetype'),
   url('#{$fontsUrl}SourceSansPro-Black.svg#SourceSansPro-Black') format('svg');
   font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Malaga Narrow OT Reg';
+  src: url('#{$fontsUrl}MalagaNarrowOT-Reg.eot');
+  src: url('#{$fontsUrl}MalagaNarrowOT-Reg.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}MalagaNarrowOT-Reg.woff2') format('woff2'),
+  url('#{$fontsUrl}MalagaNarrowOT-Reg.woff') format('woff'),
+  url('#{$fontsUrl}MalagaNarrowOT-Reg.ttf') format('truetype'),
+  url('#{$fontsUrl}MalagaNarrowOT-Reg.svg#MalagaNarrowOT-Reg') format('svg');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

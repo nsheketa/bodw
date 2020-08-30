@@ -157,9 +157,10 @@
           background-color: $darkBlueColor;
           a {
             color: $whiteColor;
-            text-transform: uppercase;
-            text-transform: uppercase;
           }
+        }
+        a{
+          text-transform: uppercase;
         }
       }
     }
@@ -179,13 +180,13 @@
 .header-buy__btn {
   display: block;
   white-space: nowrap;
-  padding: 7px 20px;
+  padding: 2px 19px;
   margin-top: 40px;
   background-color: $redColor;
   text-transform: uppercase;
   font-weight: bold;
   color: $whiteColor;
-  border: 2px solid $redColor;
+  border: 2px solid #fff;
   @include transition-04;
   font-size: 0.8rem;
   border-radius: 2px;

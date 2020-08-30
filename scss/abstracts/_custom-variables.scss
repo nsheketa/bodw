@@ -1,11 +1,13 @@
 /// Font families
 $Source: 'Source Sans Pro', sans-serif;
+$Malaga: 'Malaga Narrow OT Reg', sans-serif;
+$Titular: 'TitularW00-Black', sans-serif;
 $Arial: 'Arial', sans-serif;
 
 /// Base font family
 $baseFontFamily: $Source;
-$titleFontFamily: $Source;
-$subTitleFontFamily: $Source;
+$titleFontFamily: $Malaga;
+$subTitleFontFamily: $Titular;
 
 /// Base font size (rem), line height and letter spacing
 @mixin font-size($size: 20) {
@@ -28,10 +30,13 @@ $redColor: #E5005B;
 $darkBlueColor: #34175C;
 $whiteColor: #fff;
 $lightPurpleColor: #67207A;
+$purpleColor: #50257F;
+$greyTransparent: rgba(#a3a3a3, 0.8);
 
 $radius: 4px;
-/// spacing gap
 
+/// spacing gap
+$top-gap: 205px;
 
 /// Container's maximum width
 /// @type Length

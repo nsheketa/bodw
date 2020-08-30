@@ -3,6 +3,7 @@
 
 @import 'vendors/normalize';
 @import 'vendors/slick';
+@import 'vendors/nice-select';
 
 @import 'base/custom-reset';
 @import 'base/fonts';
@@ -31,3 +32,5 @@
 @import 'components/social';
 @import 'components/sign-up-modal';
 @import 'components/search-modal';
+@import 'components/theme-page';
+@import 'components/speakers-page';

@@ -13,6 +13,7 @@
   transform: translateX(100%);
   @include transition-custom;
   overflow: auto;
+  @include scrollbar;
 
   &.is-active {
     opacity: 1;
@@ -111,4 +112,51 @@
 
 .modal-search__results-item-content {
   max-width: 861px;
+}
+
+.modal-search__paging {
+  margin-top: 50px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      font-size: 1.4rem; //28
+      color: #fff;
+      margin: 0 5px;
+
+      &.is-active{
+        font-weight: bold;
+      }
+      a {
+        color: currentColor;
+      }
+      &.modal-search__paging-arrow {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 1rem;
+        &--prev{
+          margin-right: 20px;
+        }
+        &--next{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(md){
+    ul{
+      li{
+        &.modal-search__paging-arrow{
+          &--prev{
+            margin-right: 40px;
+          }
+          &--next{
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
 }

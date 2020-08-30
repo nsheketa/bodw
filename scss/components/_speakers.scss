@@ -2,6 +2,10 @@
   padding-top: 82px;
   padding-bottom: 112px;
   overflow: hidden;
+
+  @include respond-to(xl){
+    padding-bottom: 140px;
+  }
 }
 
 .speakers__inner {
@@ -35,11 +39,11 @@
   @include on-event {
     .speakers-list__item-img {
       img {
-        transform: scale(1.05, 1.05);
+        filter: grayscale(0);
       }
     }
     .speakers-list__item-content {
-      background-color: rgba(#000, 0.85);
+      background-color: rgba(#eee, 0.85);
     }
   }
   @include respond-to(xs) {
@@ -56,20 +60,20 @@
   @include on-event {
     .speakers-list__item-img {
       img {
-        transform: scale(1, 1);
+        filter: grayscale(0);
       }
     }
     .speakers-list__item-content {
-      background-color: transparent;
+      background-color: $bodyBackground;
       p {
-        font-size: 1.15rem;
-        transform: translateZ(0);
-        @include respond-to(md) {
-          font-size: 1.35rem;
-        }
-        @include respond-to(xl) {
-          font-size: 1.7rem;
-        }
+        //font-size: 1.15rem;
+        //transform: translateZ(0);
+        //@include respond-to(md) {
+        //  font-size: 1.35rem;
+        //}
+        //@include respond-to(xl) {
+        //  font-size: 1.7rem;
+        //}
       }
     }
   }
@@ -102,12 +106,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(#000, 0.5);
+  background-color: rgba(#eee, 0.75);
   padding: 14px 20px;
   transition: 0.7s all ease;
   p {
     transition: 0.7s all ease;
-    color: #fff;
+    color: #000;
     font-size: 80%;
     &:first-of-type {
       font-weight: bold;
@@ -128,6 +132,7 @@
       font-size: 1.1rem;
       font-weight: bold;
       line-height: 1.1;
+      color: #fff;
       text-transform: uppercase;
       transform-origin: center;
       text-align: center;
@@ -176,6 +181,10 @@
 
   @include respond-to(md) {
     margin-bottom: 83px;
+  }
+
+  @include respond-to(xl){
+    margin-bottom: 139px;
   }
 }
 
@@ -331,7 +340,7 @@
   }
   @include respond-to(md) {
     padding: 35px;
-    margin-right: 4%;
+    margin-left: 5%;
   }
 
   @include respond-to(xl) {

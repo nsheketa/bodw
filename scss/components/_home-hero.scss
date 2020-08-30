@@ -2,18 +2,51 @@
   margin-top: 90px;
 }
 
+.home-hero__carousel-item{
+  position: relative;
+  overflow: hidden;
+}
+
 .home-hero__carousel-media{
   position: relative;
-  //padding-bottom: 62.5%;
   img{
     width: 100%;
-    //@include imageCover;
   }
   @include respond-to(md){
     padding-bottom: 0;
-    //height: calc(100vh - 96px);
     img{
       width: 100%;
     }
+  }
+}
+
+.home-hero__carousel-content{
+  position: absolute;
+  bottom: 29%;
+  left: 0;
+  max-width: 98%;
+  padding: 20px;
+  background-color: #fff;
+  background-color: rgba(#ccc, 0.59);
+  @include transition-04;
+  &.is-hidden{
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .h1{
+    font-size: 1rem;
+    line-height: 1.2;
+    @include respond-to(md) {
+      font-size: 2.5rem;
+    }
+    @include respond-to(xl) {
+      font-size: 4.25rem; //85
+    }
+  }
+
+  @include respond-to(md){
+    padding: 43px 60px;
   }
 }

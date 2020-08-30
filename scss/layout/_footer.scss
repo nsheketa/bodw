@@ -122,7 +122,6 @@
 
 .footer-row__info-title {
   text-transform: uppercase;
-  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -164,13 +163,22 @@
 }
 
 .footer__detail{
-  max-width: 920px;
   p{
     font-size: 0.85rem;
     margin-bottom: 25px;
     line-height: 1.33;
   }
   @include respond-to(md){
+    display: flex;
+    .footer-detail__content{
+      max-width: 920px;
+      width: 77%;
+      padding-right: 20px;
+    }
+
+    .footer-row__col{
+      margin-left: auto;
+    }
     p{
       font-size: 0.9rem;
     }
