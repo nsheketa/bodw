@@ -14,17 +14,22 @@
 
 .slick-arrow {
   position: absolute;
-  background: #fff;
+  background: transparent;
   font-size: 0;
   border: none;
   display: block;
-  @include square(90px);
-  z-index: 0;
+  @include square(30px);
+  z-index: 2;
   top: 0px;
   bottom: 0;
   margin: auto;
   outline: none !important;
   @include transition-03();
+  @include on-event{
+    &:after{
+      border-color: $redColor;
+    }
+  }
   &:after {
     content: '';
     display: block;
@@ -34,28 +39,38 @@
     right: 0;
     bottom: 0px;
     margin: auto;
-    @include size(42px, 34px);
-    -webkit-background-size: contain;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include size(23px, 23px);
     @include transition-03();
+    border: 4px solid #fff ;
   }
   &.slick-disabled{
     opacity: 0;
     z-index: -1;
   }
   &.slick-next {
-    right: 0;
+    right: -14px;
     &:after {
-      //background-image: url("#{$imgUrl}general/slider-next-icon.svg")
+      transform: rotate(-45deg);
+      border-left: none;
+      border-top: none;
     }
   }
   &.slick-prev {
-    left: 0;
+    left: -14px;
     &:after {
-      //background-image: url("#{$imgUrl}general/slider-next-icon.svg")
+      transform: rotate(-45deg);
+      border-right: none;
+      border-bottom: none;
     }
+  }
+}
+
+@include respond-to(md){
+  &.slick-next {
+    right: -20px;
+  }
+  &.slick-prev {
+    left: -20px;
   }
 }
 
