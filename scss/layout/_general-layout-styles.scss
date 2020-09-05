@@ -1,4 +1,4 @@
-.main__bg{
+.main__bg {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -11,6 +11,47 @@
   background-repeat: no-repeat;
 }
 
-body{
+.page-block {
+  max-width: 1320px; //1270+50
+  @include center;
 
+  @include respond-to(sm) {
+    padding: 0 25px;
+  }
+}
+
+.page-title {
+  padding: 15px 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  @include shadow-lg();
+  text-transform: uppercase;
+  background: #3e155c; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #3e155c 50%, #e4015b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #3e155c 50%, #e4015b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #3e155c 50%, #e4015b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  top: -35px;
+  margin-bottom: -35px;
+
+  &--lg {
+    position: relative;
+  }
+
+  &--sm {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @include respond-to(md) {
+    padding: 27px 25px;
+    top: -58px;
+    margin-bottom: -58px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include respond-to(xl){
+    top: -75px;
+    margin-bottom: -75px;
+  }
 }

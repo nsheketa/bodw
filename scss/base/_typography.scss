@@ -39,11 +39,21 @@ h3,
   line-height: 1.2;
   font-family: $subTitleFontFamily;
   font-weight: normal;
+  &.h3--sm{
+    font-size: 1.3rem;
+  }
   @include respond-to(md) {
     font-size: 2.5rem;
+    &.h3--sm{
+      font-size: 2rem;
+    }
   }
   @include respond-to(xl) {
     font-size: 4rem; //80
+
+    &.h3--sm{
+      font-size: 3rem;  //60
+    }
   }
 }
 

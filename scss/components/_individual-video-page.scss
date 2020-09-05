@@ -1,0 +1,11 @@
+.indiv-video__title{
+  margin-right: 25px;
+  margin-left: 25px;
+  width: fit-content;
+  @include respond-to(md){
+    margin-right: auto;
+  }
+  @include respond-to(xl){
+    margin-left: 37px;
+  }
+}

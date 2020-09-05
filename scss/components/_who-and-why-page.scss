@@ -1,0 +1,242 @@
+//General
+.who__inner {
+  padding: 31px 25px 35px;
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(md) {
+    padding: 31px 40px 35px;
+  }
+}
+
+///Info
+.who-info {
+  padding-top: $top-gap;
+  margin-bottom: $bottom-gap;
+  @include respond-to(sm) {
+    margin-top: 40px;
+  }
+}
+
+.who-info__inner {
+  background-color: $greyTransparent;
+  margin-bottom: $bottom-gap;
+}
+
+.who-info__title {
+  @include respond-to(sm) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @include respond-to(md) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include respond-to(xl) {
+    margin-left: 78px;
+    margin-right: 78px;
+  }
+}
+
+.who-info__scheme {
+  padding: 55px 25px 57px;
+  @include respond-to(sm) {
+    display: flex;
+  }
+  @include respond-to(md) {
+    padding: 55px 35px 57px;
+  }
+  @include respond-to(xl) {
+    padding: 55px 60px 57px;
+  }
+}
+
+.who-info__scheme-item {
+  margin-bottom: 40px;
+  max-width: 419px;
+  @include center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(sm) {
+    width: 50%;
+    max-width: 50%;
+    padding-left: 20px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include respond-to(xl) {
+    padding-left: 54px;
+  }
+}
+
+.who-info__scheme-item-media {
+  max-width: 270px;
+  margin-bottom: 20px;
+  @include center;
+
+  img {
+    width: 100%;
+  }
+
+  @include respond-to(sm) {
+    margin-left: 0;
+  }
+  @include respond-to(md) {
+    margin-bottom: 44px;
+    max-width: 350px;
+  }
+  @include respond-to(lg) {
+    max-width: 419px;
+  }
+}
+
+.who-info__scheme-item-content {
+  p {
+    line-height: 1.2;
+
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+///Participation
+.who-participation {
+  margin-bottom: $bottom-gap;
+}
+
+.who-participation__content {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 173px;
+  max-width: 1160px;
+  @include shadow-lg();
+
+  p {
+    max-width: 972px;
+  }
+}
+
+.who-participation__carousel {
+  max-width: 1184px;
+  margin-left: auto;
+  margin-top: -143px;
+}
+
+.who-participation__carousel-item {
+  position: relative;
+  @include shadow-custom(0, 10px, 20px, 0, rgba(#000, 0.5));
+}
+
+.who-participation__carousel-item-media {
+  width: 100%;
+  font-size: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.who-participation__carousel-item-content {
+  padding: 25px;
+  background-color: #eaeaea;
+  color: #000;
+
+  p {
+    line-height: 0.96;
+    margin-bottom: 1em;
+  }
+
+  @include respond-to(md) {
+    position: absolute;
+    top: 87px;
+    left: 62px;
+    max-width: 450px;
+    background-color: transparent;
+  }
+}
+
+///MEDIA
+.who-media {
+  margin-bottom: $bottom-gap;
+
+  .who__inner {
+    background-color: $greyTransparent;
+    @include shadow-custom(0, 10px, 20px, 0, rgba(#000, 0.5));
+  }
+}
+
+.who-media__list {
+  @include respond-to(sm) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -40px;
+  }
+  @include respond-to(md) {
+    margin-bottom: 0;
+  }
+  @include respond-to(xl) {
+    margin: 0 -20px 0;
+  }
+}
+
+.who-media__list-item {
+  display: block;
+  color: currentColor;
+  margin-bottom: 40px;
+
+  @include on-event {
+    img {
+      transform: scale(1.1, 1.1);
+    }
+  }
+  @include respond-to(sm) {
+    width: 50%;
+    max-width: 50%;
+    padding: 0 10px;
+  }
+  @include respond-to(md) {
+    width: 25%;
+    max-width: 25%;
+  }
+  @include respond-to(xl) {
+    padding: 0 20px;
+  }
+}
+
+.who-medial__list-item-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 98%;
+  font-size: 0;
+  @include shadow-custom(0, 5px, 5px, 0, rgba(#000, 0.7));
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  img {
+    @include imageCover;
+    @include transition-img;
+  }
+}
+
+.who-media__list-item-content {
+  padding-right: 10px;
+
+  p {
+    line-height: 1.2;
+  }
+}

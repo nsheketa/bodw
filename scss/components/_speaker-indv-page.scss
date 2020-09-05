@@ -12,7 +12,7 @@
 
 .speaker-article {
   padding: 25px;
-  margin-bottom: 63px;
+  margin-bottom: $bottom-gap;
   background-color: $greyTransparent;
   @include shadow-lg();
   @include respond-to(md) {
@@ -321,10 +321,6 @@
 
 
 ///NEWS
-.speaker-news {
-
-}
-
 .speaker-news__list {
   margin: 0 -12px;
   @include respond-to(sm){

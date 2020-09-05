@@ -220,6 +220,48 @@ $(document).ready(function () {
     ]
   });
 
+  $('.about-info__carousel').slick({
+    arrows: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
+
+  $('.who-participation__carousel').slick({
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  })
   function pinLetters() {
     const letters = $(".speaker-list__letters");
     if (letters.length) {
