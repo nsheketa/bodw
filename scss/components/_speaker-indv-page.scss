@@ -11,12 +11,9 @@
 }
 
 .speaker-article {
-  padding: 25px;
-  margin-bottom: $bottom-gap;
-  background-color: $greyTransparent;
-  @include shadow-lg();
   @include respond-to(md) {
-    padding: 30px 50px 40px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -207,9 +204,6 @@
 }
 
 ///SPEAKER SESSIONS
-.speaker-sessions {
-  @include shadow-custom(0, 10px, 20px, 0, rgba(#000, 0.5));
-}
 
 .speaker-sessions__item {
   max-width: 948px;
@@ -299,6 +293,19 @@
 ///PORTFOLIO
 .speaker-portfolio__slider {
   margin: 0 -12px;
+  padding: 0 20px;
+  @include respond-to(md) {
+    padding: 0;
+    .slick-arrow {
+      &.slick-prev {
+        left: -23px;
+      }
+
+      &.slick-next {
+        right: -23px;
+      }
+    }
+  }
 }
 
 .speaker-portfolio__slider-item {
@@ -323,7 +330,7 @@
 ///NEWS
 .speaker-news__list {
   margin: 0 -12px;
-  @include respond-to(sm){
+  @include respond-to(sm) {
     display: flex;
     align-items: flex-start;
   }
@@ -331,15 +338,22 @@
 
 .speaker-news__list-item {
   padding: 0 12px;
-  @include respond-to(sm){
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(sm) {
     width: 50%;
     max-width: 50%;
+    margin-bottom: 0;
   }
-  @include respond-to(md){
+  @include respond-to(md) {
     width: 33.33%;
     max-width: 33.33%;
   }
-  @include respond-to(lg){
+  @include respond-to(lg) {
     width: 25%;
     max-width: 25%;
   }
@@ -348,29 +362,31 @@
 .speaker-news__item-inner {
   display: block;
   color: currentColor;
-  @include on-event{
-    img{
+  @include on-event {
+    img {
       transform: scale(1.1, 1.1);
     }
   }
 }
 
-.speaker-news__item-img{
+.speaker-news__item-img {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding-bottom: 100%;
   @include shadow-sm();
   font-size: 0;
-  img{
+
+  img {
     @include imageCover;
     transition: 1s all ease-in-out;
   }
 }
 
-.speaker-news__item-content{
+.speaker-news__item-content {
   margin-top: 16px;
-  p{
+
+  p {
     line-height: 1.2;
     @include transition-04;
   }

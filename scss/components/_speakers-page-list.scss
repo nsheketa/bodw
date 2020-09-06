@@ -1,0 +1,49 @@
+///Speakers list on speakers page
+
+.speakers-list__outer {
+  position: relative;
+  margin-top: 63px;
+}
+
+.speaker-list__letters {
+  position: absolute;
+  right: -32px;
+  top: 0;
+
+  a {
+    display: block;
+    text-align: center;
+    color: currentColor;
+    text-transform: uppercase;
+    @include on-event {
+      color: $redColor;
+    }
+  }
+
+  @include respond-to(md) {
+    right: -19px;
+  }
+
+  @include respond-to(xl) {
+    right: -32px;
+    right: auto;
+    top: 110px !important;
+    position: fixed;
+    opacity: 0;
+    &.is-visible {
+      opacity: 1;
+    }
+  }
+}
+
+.speakers-list--main {
+  //margin: 0 -11px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  .speakers-list__item {
+    padding: 0 11px 22px;
+  }
+}

@@ -48,7 +48,7 @@
     z-index: -1;
   }
   &.slick-next {
-    right: -14px;
+    right: 0px;
     &:after {
       transform: rotate(-45deg);
       border-left: none;
@@ -56,7 +56,7 @@
     }
   }
   &.slick-prev {
-    left: -14px;
+    left: 0px;
     &:after {
       transform: rotate(-45deg);
       border-right: none;
@@ -67,10 +67,10 @@
 
 @include respond-to(md){
   &.slick-next {
-    right: -20px;
+    right: -7px;
   }
   &.slick-prev {
-    left: -20px;
+    left: -7px;
   }
 }
 

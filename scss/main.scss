@@ -24,6 +24,7 @@
 @import 'components/form';
 @import 'components/video-bg';
 
+//homepages
 @import 'components/home-hero';
 @import 'components/countdown';
 @import 'components/speakers';
@@ -32,8 +33,17 @@
 @import 'components/social';
 @import 'components/sign-up-modal';
 @import 'components/search-modal';
+
+//general
+@import 'components/video-section';
+@import 'components/media-section';
+@import 'components/mixed-section';
+
+//pages
 @import 'components/theme-page';
-@import 'components/speakers-page';
+@import 'components/speakers-page-header';
+@import 'components/speakers-page-list';
+@import 'components/speaker-talks-page';
 @import 'components/speaker-indv-page';
 @import 'components/share-btn';
 @import 'components/individual-session-page';
@@ -41,3 +51,9 @@
 @import 'components/who-and-why-page';
 @import 'components/conference-videos-page';
 @import 'components/individual-video-page';
+@import 'components/programme-page';
+@import 'components/networking-page';
+@import 'components/app-page';
+@import 'components/why-sponsor-page';
+
+

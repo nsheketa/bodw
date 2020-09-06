@@ -1,0 +1,53 @@
+.networking-header{
+  padding-top: $top-gap;
+}
+
+.networking-header__inner{
+  @include respond-to(md) {
+    display: flex;
+  }
+}
+
+.networking-header__title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  max-width: 400px;
+  @include center;
+  margin-top: -69px;
+  margin-bottom: 30px;
+  @extend .title-general;
+  h1{
+    text-transform: uppercase;
+  }
+  @include respond-to(sm){
+    margin-left: -40px;
+  }
+  @include respond-to(md){
+    margin-left: -57px;
+    margin-top: -69px;
+    margin-bottom: 0;
+    flex: 1 0 400px;
+    max-width: 400px;
+  }
+  @include respond-to(xl){
+    flex: 1 0 570px;
+    max-width: 570px;
+    height: 179px;
+    margin-left: -74px;
+  }
+}
+
+.networking-header__content{
+  @include respond-to(md){
+    padding-left: 37px;
+    width: calc(100% - 300px);
+    max-width: calc(100% - 300px);
+  }
+  @include respond-to(xl){
+    padding-left: 37px;
+    width: calc(100% - 515px);
+    max-width: calc(100% - 515px);
+  }
+}

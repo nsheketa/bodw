@@ -15,25 +15,33 @@
   border: 2px solid;
   color: #fff;
 
-  &--red{
+  &--red {
     background-color: $redColor;
     border-color: $redColor;
 
-    @include on-event{
-      background-color: #fff;
-      color: $redColor;
-    }
-  }
-  &--purple-light{
-    background-color: $lightPurpleColor;
-    border-color: $lightPurpleColor;
-    @include on-event{
-      background-color: #fff;
-      color: $lightPurpleColor;
+    @include on-event {
+      border-color: #fff;
     }
   }
 
-  @include respond-to(md){
+  &--purple {
+    background-color: $purpleColor;
+    border-color: $purpleColor;
+
+    @include on-event {
+      border-color: #fff;
+    }
+  }
+
+  &--purple-light {
+    background-color: $lightPurpleColor;
+    border-color: $lightPurpleColor;
+    @include on-event {
+      border-color: #fff;
+    }
+  }
+
+  @include respond-to(md) {
     font-size: 1rem;
   }
 }

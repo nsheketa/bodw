@@ -1,0 +1,31 @@
+.speaker-talks__video-section {
+
+}
+
+.speaker-talks__section-inner {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0 25px;
+
+  .videos-block__list {
+    flex-wrap: wrap;
+    margin-bottom: $bottom-gap - 20px;
+  }
+
+  .videos-block__list-item {
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(sm) {
+    padding: 0;
+  }
+  @include respond-to(md) {
+    .videos-block__list-item {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.speaker-talks__btn {
+  text-align: center;
+}

@@ -1,0 +1,122 @@
+///Top section for speakers page and speakers talks page
+
+.speakers-header {
+  position: relative;
+  padding-top: $top-gap;
+  z-index: 2;
+}
+
+.speaker-header__inner {
+  max-width: 1320px; //1270+50
+  @include center;
+  padding: 0 25px;
+}
+
+.speaker-header__inner {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 27px;
+  z-index: 2;
+
+  @include respond-to(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.speakers-header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 520px;
+  padding: 15px;
+  height: 100px;
+  margin-top: -45px;
+  @extend .title-general;
+
+  h1 {
+    text-transform: uppercase;
+  }
+  @include respond-to(md){
+    flex: 1 0 400px;
+  }
+
+  @include respond-to(xl){
+    height: 130px;
+    flex: 1 0 520px;
+  }
+}
+
+.speakers-header__filters {
+  margin-top: 20px;
+  @include respond-to(sm) {
+    display: flex;
+    margin: 20px -9px 0;
+    flex: 1 0 auto;
+  }
+  @include respond-to(md) {
+    margin-top: 0;
+    padding-left: 30px;
+    max-width: calc(100% - 400px);
+    width: calc(100% - 400px);
+  }
+  @include respond-to(xl){
+    padding-left: 30px;
+    margin: 0 -18px;
+    max-width: calc(100% - 520px);
+    width: calc(100% - 520px);
+  }
+}
+
+.speakers-header__filters-item {
+  min-height: 75px;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  select, .nice-select {
+    border-radius: 10px;
+    border-color: #50257F;
+    padding: 12px 27px 13px;
+    width: 100%;
+    color: $purpleColor;
+    font-size: 0.9rem;
+  }
+
+  .nice-select {
+    &:after {
+      border-color: $purpleColor;
+      right: 27px;
+    }
+
+    .current {
+      display: block;
+      line-height: 1;
+    }
+
+    .list {
+      width: 100%;
+      border-radius: 2px;
+      z-index: 2;
+    }
+  }
+
+  @include respond-to(sm) {
+    margin: 0 9px;
+    width: 50%;
+    max-width: 50%;
+  }
+  @include respond-to(xl){
+    margin: 0 18px;
+  }
+}
+
+.speakers-header__filters-item-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+

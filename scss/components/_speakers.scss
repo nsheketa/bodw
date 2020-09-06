@@ -65,16 +65,6 @@
     }
     .speakers-list__item-content {
       background-color: $bodyBackground;
-      p {
-        //font-size: 1.15rem;
-        //transform: translateZ(0);
-        //@include respond-to(md) {
-        //  font-size: 1.35rem;
-        //}
-        //@include respond-to(xl) {
-        //  font-size: 1.7rem;
-        //}
-      }
     }
   }
 }
@@ -116,9 +106,6 @@
     &:first-of-type {
       font-weight: bold;
       font-size: 90%;
-    }
-    &:last-of-type {
-      //font-size: 90%;
     }
   }
 

@@ -1,0 +1,71 @@
+
+///MEDIA Section
+.media-section {
+  margin-bottom: $bottom-gap;
+
+  .who__inner {
+    background-color: $greyTransparent;
+    @include shadow-custom(0, 10px, 20px, 0, rgba(#000, 0.5));
+  }
+}
+
+.media-section__list {
+  @include respond-to(sm) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -40px;
+  }
+  @include respond-to(md) {
+    margin-bottom: 0;
+  }
+  @include respond-to(xl) {
+    margin: 0 -20px 0;
+  }
+}
+
+.media-section__list-item {
+  display: block;
+  color: currentColor;
+  margin-bottom: 40px;
+
+  @include on-event {
+    img {
+      transform: scale(1.1, 1.1);
+    }
+  }
+  @include respond-to(sm) {
+    width: 50%;
+    max-width: 50%;
+    padding: 0 10px;
+  }
+  @include respond-to(md) {
+    width: 25%;
+    max-width: 25%;
+  }
+  @include respond-to(xl) {
+    padding: 0 20px;
+  }
+}
+
+.media-section__list-item-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 98%;
+  font-size: 0;
+  @include shadow-custom(0, 5px, 5px, 0, rgba(#000, 0.7));
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  img {
+    @include imageCover;
+    @include transition-img;
+  }
+}
+
+.media-section__list-item-content {
+  padding-right: 10px;
+
+  p {
+    line-height: 1.2;
+  }
+}
