@@ -1,8 +1,8 @@
 .indiv-video__title{
   margin-right: 25px;
   margin-left: 25px;
+  width: -moz-fit-content;
   width: fit-content;
-  width: max-content;
   @include respond-to(md){
     margin-right: auto;
   }
