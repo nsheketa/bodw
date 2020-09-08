@@ -1,0 +1,14 @@
+//travelling tips page + faq page
+
+.tips-section__title {
+  max-width: 870px;
+  margin: -72px auto 40px;
+  top: auto;
+  @include respond-to(md){
+    margin-top: -95px;
+  }
+  @include respond-to(xl) {
+    margin-top: -114px;
+    margin-bottom: 60px;
+  }
+}

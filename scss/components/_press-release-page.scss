@@ -1,0 +1,128 @@
+.press-section {
+  max-width: 1320px;
+  @include center;
+
+  h1 {
+    margin-bottom: 46px;
+    padding-left: 25px;
+    font-family: $titleFontFamily;
+  }
+
+  @include respond-to(sm) {
+    padding-left: 25px;
+    padding-right: 25px;
+    h1 {
+      padding-left: 0;
+    }
+  }
+}
+
+.press-section__block {
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: $bottom-gap;
+}
+
+.press-section__block-inner {
+  position: relative;
+  padding: 25px;
+  z-index: 1;
+  background: #2e2e88; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #2e2e88 -61%, #e5005b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #2e2e88 -61%, #e5005b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #2e2e88 -61%, #e5005b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  @include shadow-custom(0, 5px, 5px, 0, rgba(#000, 0.7));
+  @include respond-to(md) {
+    display: flex;
+  }
+  @include respond-to(md) {
+    padding: 40px 40px 47px;
+  }
+}
+
+.press-section__block-img {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: -50px;
+
+  img {
+    width: 100%;
+    @include shadow-custom(0, 10px, 20px, 0, rgba(#000, 0.5))
+  }
+
+  @include respond-to(md) {
+    width: 53%;
+    max-width: 53%;
+    margin-bottom: 0;
+    margin-top: 0;
+    img {
+      @include imageCover;
+      height: calc(100% + 67px);
+    }
+  }
+  @include respond-to(xl) {
+    img {
+      height: calc(100% + 87px);
+    }
+  }
+}
+
+.press-section__block-content {
+  .date {
+    margin-bottom: 16px;
+  }
+
+  .text--lg {
+    margin-bottom: 25px;
+  }
+
+  @include respond-to(md) {
+    width: 47%;
+    max-width: 47%;
+    padding-left: 40px;
+  }
+  @include respond-to(xl) {
+    padding-left: 60px;
+    .text--lg {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.press-section__block-content-inner {
+  max-width: 426px;
+}
+
+.press-section__content-btn {
+  margin-top: 25px;
+
+  .btn {
+    padding: 8px 33px 9px 33px;
+    border-radius: 4px;
+    font-family: $Arial;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  @include respond-to(md) {
+    .btn {
+      font-size: 20px;
+    }
+  }
+}
+
+.press-section__paging-wrap{
+  max-width: 1320px;
+  padding: 0px 25px 67px;
+  border-top: 3px solid #fff;
+  .modal-search__paging{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include respond-to(sm){
+    .modal-search__paging{
+      margin-right: -25px;
+    }
+  }
+}

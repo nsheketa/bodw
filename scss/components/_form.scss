@@ -38,10 +38,6 @@
   }
 }
 
-.form__textarea-wrap {
-
-}
-
 .form__textarea {
   padding-top: 13px;
   padding-left: 13px;
@@ -59,7 +55,14 @@
   }
 }
 
-.form__checkbox-wrap {
+.form__textarea{
+  min-height: 140px;
+  padding: 20px;
+  background-color: #fff;
+  resize: none;
+}
+
+.form__checkbox-wrap, .form__radio-wrap {
   text-align: left;
   label {
     position: relative;
@@ -116,6 +119,16 @@
     width: 0;
     visibility: hidden;
     display: none;
+  }
+}
+
+.form__radio-wrap{
+  display: flex;
+  flex-direction: column;
+  label{
+    display: inline-flex;
+    width: max-content;
+    margin-bottom: 10px;
   }
 }
 

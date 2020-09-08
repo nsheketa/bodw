@@ -2,9 +2,6 @@
   max-width: 1320px; //1270+50
   padding: $top-gap 25px 70px;
   @include center;
-  @include respond-to(sm) {
-    margin-top: 40px;
-  }
 }
 
 .indiv-session__general {

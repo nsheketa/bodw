@@ -13,11 +13,7 @@
 
 ///Info
 .who-info {
-  padding-top: $top-gap;
   margin-bottom: $bottom-gap;
-  @include respond-to(sm) {
-    margin-top: 40px;
-  }
 }
 
 .who-info__inner {

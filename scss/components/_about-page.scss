@@ -1,11 +1,3 @@
-.about-page__wrap{
-  padding-top: $top-gap;
-
-  @include respond-to(sm){
-    margin-top: 40px;
-  }
-}
-
 .about-info__inner{
   padding-top: 66px;
 }

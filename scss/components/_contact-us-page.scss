@@ -1,0 +1,82 @@
+.contact-section{
+  padding-top: 70px;
+}
+
+.contact-section__inner {
+  padding-top: 47px;
+  background: #2e2e88; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #2e2e88 -61%, #e5005b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #2e2e88 -61%, #e5005b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #2e2e88 -61%, #e5005b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  h4{
+    font-family: $titleFontFamily;
+    margin-bottom: 30px;
+  }
+  @include respond-to(md) {
+    padding-left: 40px;
+    padding-right: 40px;
+    h4{
+      margin-bottom: 44px;
+    }
+  }
+  @include respond-to(xl) {
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+}
+
+.contact-section__row {
+  @include respond-to(md) {
+    display: flex;
+  }
+}
+
+.contact-section__row-col {
+  padding: 0;
+  &:first-of-type{
+    margin-bottom: 40px;
+  }
+  @include respond-to(md) {
+    width: 50%;
+    max-width: 50%;
+    &:first-of-type {
+      padding-right: 40px;
+      border-right: 1px solid $purpleColor;
+      margin-bottom: 0;
+    }
+    &:last-of-type {
+      padding-left: 40px;
+      padding-top: 25px;
+    }
+  }
+  @include respond-to(xl) {
+    &:first-of-type {
+      padding-right: 78px;
+    }
+    &:last-of-type {
+      padding-left: 78px;
+    }
+  }
+}
+
+.contact-form__wrap {
+  .form__radio-wrap {
+    margin-bottom: 23px;
+  }
+  @include respond-to(md){
+    padding-bottom: 30px;
+  }
+}
+
+.contact-section__content {
+  p {
+    margin-bottom: 1em;
+    line-height: 1.35;
+
+    .title {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}

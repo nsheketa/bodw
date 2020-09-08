@@ -1,7 +1,3 @@
-.networking-header{
-  padding-top: $top-gap;
-}
-
 .networking-header__inner{
   @include respond-to(md) {
     display: flex;

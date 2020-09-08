@@ -8,6 +8,23 @@
   p {
     margin-bottom: 25px;
   }
+  ul{
+    li{
+      position: relative;
+      padding-left: 26px;
+      line-height: 1.5;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        @include square(13px);
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 .mixed-section__media {

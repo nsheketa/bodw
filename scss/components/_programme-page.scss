@@ -4,12 +4,9 @@ $programme-width: 1384px;
   max-width: $programme-width;
   @include center;
   @include respond-to(sm) {
-    padding: 0 25px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
-}
-
-.programme-header {
-  padding-top: $top-gap;
 }
 
 .programme-header__inner {

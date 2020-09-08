@@ -35,6 +35,22 @@
   }
 }
 
+.first-section{
+  padding-top: $top-gap;
+  &--sm{
+    padding-top: $top-gap - 40px;
+  }
+  @include respond-to(sm){
+    &--lg {
+      margin-top: 40px;
+    }
+  }
+}
+
+.padding-top-press{
+  padding-top: 87px;
+}
+
 .title-general {
   text-align: center;
   @include shadow-lg();
@@ -68,6 +84,9 @@
     margin-bottom: -58px;
     margin-left: 40px;
     margin-right: 40px;
+    &--centered{
+      @include center;
+    }
   }
   @include respond-to(xl) {
     top: -75px;
