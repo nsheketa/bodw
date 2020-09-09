@@ -41,6 +41,17 @@
     }
   }
 
+  &--white{
+    background-color: #fff;
+    border-color: $purpleColor;
+    color: $purpleColor;
+    @include on-event{
+      background-color: $purpleColor;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
   @include respond-to(md) {
     font-size: 1rem;
   }

@@ -66,10 +66,15 @@
   padding-bottom: 60.33%;
 
   @include when-inside('.explore-col--sm'){
-    padding-bottom: 61.9%;
+    padding-bottom: 56.4%;
   }
   img {
     @include imageCover;
+  }
+  @include respond-to(xl){
+    @include when-inside('.explore-col--sm'){
+      padding-bottom: 58.2%;
+    }
   }
 }
 
