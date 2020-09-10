@@ -56,7 +56,7 @@ $(document).ready(function () {
           }
         });
       },
-      { rootMargin: "0px 0px -15% 0px" }
+      {rootMargin: "0px 0px -15% 0px"}
     );
   }
 
@@ -325,7 +325,49 @@ $(document).ready(function () {
       return;
     }
   }
+
   // pinLetters();
+
+  /*
+  event photos popup
+  magnific popup
+  https://dimsemenov.com/plugins/magnific-popup/documentation.html
+   */
+  $('.events-photos__block').each(function () { // the containers for all your galleries
+    $(this).magnificPopup({
+      delegate: '.events-photo__item-img', // child items selector, by clicking on it popup will open
+      disableOn: 200,
+      type: 'image',
+      image: {
+        markup: `<div class="mfp-figure">
+                  <div class="mfp-img"></div>
+                  <div class="mfp-bottom-bar">
+                  <div class="mfp-title"></div>
+                  </div>
+                 </div>`, // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close butt
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+        titleSrc: function (item) {
+          return `<h4>${item.el.attr('title')}</h4>
+                  <p class="caption">${item.el.data('caption')}<a href="${item.el.attr('href')}" class="btn mfp-btn"
+                 download="">Download</a></p>`;
+        },
+        verticalFit: true, // Fits image in area vertically
+
+        tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+      },
+      mainClass: 'mfp-fade',
+      removalDelay: 300,
+      gallery: {
+        enabled: true, // set to true to enable gallery
+        preload: [0, 2], // read about this option in next Lazy-loading section
+        navigateByImgClick: true,
+        arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+        tPrev: 'Previous (Left arrow key)', // title for left button
+        tNext: 'Next (Right arrow key)', // title for right button
+      }
+    });
+  });
+
 
   if (isObserver) {
     $(".js-visibility").each((i, el) => {

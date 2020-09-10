@@ -1,0 +1,129 @@
+.mfp-bg {
+  background: rgba($greyTransparent, 0.7) !important;
+}
+
+.mfp-figure:after {
+  box-shadow: none !important;
+}
+
+.mfp-arrow {
+  width: 35px !important;
+  height: 35px !important;
+  opacity: 1 !important;
+
+  &:before {
+    display: none !important;
+  }
+
+  &:after {
+    display: none !important;
+  }
+  @include respond-to(sm){
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+.mfp-arrow-right {
+  background: url("#{$imgUrl}general/arrow-next.svg") !important;
+  background-position: center !important;
+  background-size: 35px 35px !important;
+  background-repeat: no-repeat !important;
+  right:10px !important;
+  @include respond-to(sm){
+    right: 20px !important;
+      background-size: 50px 50px !important;
+  }
+}
+
+
+.mfp-arrow-left {
+  background: url("#{$imgUrl}general/arrow-prev.svg") !important;
+  background-position: center !important;
+  background-size: 35px 35px !important;
+  background-repeat: no-repeat !important;
+  left: 10px !important;
+  @include respond-to(sm){
+    left: 20px !important;
+      background-size: 50px 50px !important;
+  }
+}
+
+.mfp-title {
+  background-color: #fff;
+  padding: 10px;
+  color: $lightBlueColor;
+
+  h4 {
+    font-size: 130%;
+  }
+
+  p {
+    font-size: 85%;
+
+    a {
+      display: flex;
+      width: 120px;
+      max-width: 120px;
+      font-size: 0.75rem;
+      flex: 1 0 120px;
+      height: 34px;
+      margin-top: 20px;
+      background-color: $lightBlueColor;
+      color: #fff;
+      border: 2px solid $lightBlueColor;
+      border-radius: 4px;
+      @include on-event {
+        border-color: #fff;
+      }
+    }
+    @include respond-to(sm){
+      display: flex;
+      justify-content: space-between;
+      a{
+        margin-left: 30px;
+        margin-top: 0;
+      }
+    }
+  }
+  @include respond-to(sm){
+    padding: 10px 20px 20px 10px;
+  }
+}
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

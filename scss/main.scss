@@ -4,6 +4,7 @@
 @import 'vendors/normalize';
 @import 'vendors/slick';
 @import 'vendors/nice-select';
+@import 'vendors/magnific-popup';
 
 @import 'base/custom-reset';
 @import 'base/fonts';
@@ -62,5 +63,9 @@
 @import 'components/press-release-page';
 @import 'components/individual-article-page';
 @import 'components/media-page';
+@import 'components/tickets-page';
+@import 'components/events-photos-page';
+@import 'components/magnific-popup-overwrite';
+@import 'components/partners-sponsors-page';
 
 
