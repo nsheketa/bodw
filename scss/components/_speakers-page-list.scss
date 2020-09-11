@@ -3,35 +3,80 @@
 .speakers-list__outer {
   position: relative;
   margin-top: 63px;
+  padding-top: 90px;
+  padding-bottom: $bottom-gap;
+  @include respond-to(sm) {
+    padding-top: 72px;
+  }
+  @include respond-to(md) {
+    padding-top: 65px;
+  }
+  @include respond-to(xl) {
+    padding-top: 0;
+    position: static;
+  }
 }
 
-.speaker-list__letters {
+.speakers-list__letters {
   position: absolute;
-  right: -32px;
+
+  background-color: $blueColor;
+  padding: 10px 25px;
   top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 
   a {
     display: block;
     text-align: center;
     color: currentColor;
     text-transform: uppercase;
+    width: 20px;
     @include on-event {
       color: $redColor;
     }
   }
 
-  @include respond-to(md) {
-    right: -19px;
+  &.is-fixed {
+    position: fixed;
+  }
+
+  @include respond-max(1440) {
+    width: calc(100% - 50px);
+    left: 25px !important;
+    right: auto !important;
+    top: 0 !important;
+    &.is-fixed {
+      top: 91px !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 1270px;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+  @include respond-max(1024) {
+    right: 0 !important;
+    left: 0 !important;
+    width: 100%;
+
+    &.is-fixed {
+      top: 91px !important;
+    }
   }
 
   @include respond-to(xl) {
-    right: -32px;
-    right: auto;
-    top: 110px !important;
-    position: fixed;
-    opacity: 0;
-    &.is-visible {
-      opacity: 1;
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    width: 20px;
+    //right: auto;
+
+    &.is-fixed {
+      top: 110px !important;
     }
   }
 }
@@ -41,9 +86,19 @@
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width: none;
+  width: auto;
+  padding: 0 25px;
 
   .speakers-list__item {
-    padding: 0 11px 22px;
+    padding: 0 0px 22px;
+  }
+
+  @include respond-to(sm) {
+    margin: 0 -11px;
+    padding: 0;
+    .speakers-list__item {
+      padding: 0 11px 22px;
+    }
   }
 }

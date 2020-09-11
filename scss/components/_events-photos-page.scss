@@ -2,6 +2,7 @@
   h1 {
     padding-left: 25px;
     margin-bottom: 46px;
+    font-family: $titleFontFamily;
   }
   @include respond-to(md){
     h1{

@@ -6,9 +6,12 @@
   top: auto;
   @include respond-to(md){
     margin-top: -95px;
+    min-width: 870px;
   }
   @include respond-to(xl) {
     margin-top: -114px;
     margin-bottom: 60px;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
   }
 }

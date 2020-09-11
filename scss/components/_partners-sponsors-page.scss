@@ -20,6 +20,7 @@
   @include respond-to(md) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -79,7 +80,8 @@
 
   @include respond-to(md) {
     width: 25%;
-    position: sticky;
+    position:-webkit-sticky;
+    position:sticky;
     top: 0;
   }
 }

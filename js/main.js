@@ -289,44 +289,40 @@ $(document).ready(function () {
     ]
   })
 
+  //Speakers page letter pinning
   function pinLetters() {
-    const letters = $(".speaker-list__letters");
+    const letters = $(".speakers-list__letters");
+    const parent = $(".speakers-list__outer");
+
     if (letters.length) {
-      // if (wWidth > 1440) {
-      //   var scene = new ScrollMagic.Scene({
-      //     triggerElement: ".speaker-list__outer",
-      //     triggerHook: 0.4,
-      //     duration: "100%",
-      //   })
-      //     .setPin(".speaker-list__letters", {
-      //       pushFollowers: false,
-      //     })
-      //     .addIndicators({ name: "1" }) // add indicators (requires plugin)
-      //     .addTo(controller);
-      //   // .setClassToggle('.speaker-list__letters', 'is-visible')
-      //   var scene_02 = new ScrollMagic.Scene({
-      //     triggerElement: ".speaker-list__outer",
-      //     triggerHook: 0,
-      //     duration: "100%",
-      //   })
-      //     .on("enter", function () {
-      //       letters.addClass("is-visible");
-      //     })
-      //     .on("leave", function () {
-      //       letters.addClass("is-visible");
-      //     })
-      //     // .setClassToggle(".speaker-list__letters", "is-visible")
-      //     .addIndicators({ name: "2" }) // add indicators (requires plugin)
-      //     .addTo(controller);
-      // }
-
-
+      letters.css({
+        left: parent.offset().left + parent.width() + 50 + 'px',
+        top: parent.offset().top + 'px'
+      })
     } else {
       return;
     }
   }
 
-  // pinLetters();
+  $(window).on('scroll', function () {
+    const letters = $(".speakers-list__letters");
+    const parent = $(".speakers-list__outer");
+    let parentTop = parent.offset().top;
+    let parentBottom = parentTop + parent.height() - 100;
+    let scrollTop = $(window).scrollTop();
+
+    if (letters.length) {
+      if (scrollTop > parentTop - 100 && scrollTop < parentBottom) {
+        console.log('fixed')
+        letters.addClass('is-fixed');
+      } else {
+        letters.removeClass('is-fixed');
+      }
+    } else {
+      return;
+    }
+  })
+
 
   /*
   event photos popup
@@ -375,6 +371,9 @@ $(document).ready(function () {
     });
   }
 
+  ///Function calls
+  pinLetters();
+
   /* Trigger resize once */
   $(window).resize(function () {
     clearTimeout(resizeId);
@@ -384,9 +383,9 @@ $(document).ready(function () {
       let width = $(window).width();
       if (wWidth !== width) {
         wWidth = width;
-      }
 
-      pinLetters();
+        pinLetters();
+      }
     }
   });
 });

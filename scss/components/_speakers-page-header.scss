@@ -1,15 +1,15 @@
 ///Top section for speakers page and speakers talks page
 
-.speakers-header {
+.speakers-page__header {
   position: relative;
-  padding-top: $top-gap;
   z-index: 2;
 }
 
-.speaker-header__inner {
-  max-width: 1320px; //1270+50
-  @include center;
-  padding: 0 25px;
+.speakers-page__header__inner {
+  @include respond-to(md) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .speaker-header__inner {
@@ -17,11 +17,6 @@
   padding-top: 18px;
   padding-bottom: 27px;
   z-index: 2;
-
-  @include respond-to(md) {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .speakers-header__title {
@@ -31,10 +26,11 @@
   max-width: 520px;
   padding: 15px;
   height: 100px;
-  margin-top: -45px;
+  margin-top: -55px;
   @extend .title-general;
 
   h1 {
+    font-family: $titleFontFamily;
     text-transform: uppercase;
   }
   @include respond-to(md){

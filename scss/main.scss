@@ -15,6 +15,7 @@
 @import 'layout/containers';
 @import 'layout/grids';
 @import 'layout/header';
+@import 'layout/pre-footer';
 @import 'layout/footer';
 @import 'layout/general-layout-styles';
 
@@ -25,13 +26,12 @@
 @import 'components/form';
 @import 'components/video-bg';
 
-//homepages
+//homepage
 @import 'components/home-hero';
 @import 'components/countdown';
 @import 'components/speakers';
 @import 'components/partners';
 @import 'components/programmes';
-@import 'components/social';
 @import 'components/sign-up-modal';
 @import 'components/search-modal';
 

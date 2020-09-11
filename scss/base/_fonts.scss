@@ -1,101 +1,130 @@
 @import "../abstracts/custom-variables";
-@import url(//db.onlinewebfonts.com/c/59fc2a88361f7edf2d750209902cfe59?family=TitularW00-Black);
+//@import url(//db.onlinewebfonts.com/c/59fc2a88361f7edf2d750209902cfe59?family=TitularW00-Black);
 ///https://www.onlinewebfonts.com/download/59fc2a88361f7edf2d750209902cfe59
 
+@import url("https://p.typekit.net/p.css?s=1&k=wim6bls&ht=tk&f=17265.28646.35538&a=32521269&app=typekit&e=css");
+
+//@font-face {
+//  font-family: "TitularW00-Black";
+//  src: url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.eot");
+//  src: url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.woff") format("woff"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.svg#TitularW00-Black") format("svg");
+//}
+//
+//@font-face {
+//  font-family: 'Source Sans Pro';
+//  src: url('#{$fontsUrl}SourceSansPro-SemiBold.eot');
+//  src: url('#{$fontsUrl}SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}SourceSansPro-SemiBold.woff2') format('woff2'),
+//  url('#{$fontsUrl}SourceSansPro-SemiBold.woff') format('woff'),
+//  url('#{$fontsUrl}SourceSansPro-SemiBold.ttf') format('truetype'),
+//  url('#{$fontsUrl}SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
+//  font-weight: 600;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Source Sans Pro';
+//  src: url('#{$fontsUrl}SourceSansPro-Bold.eot');
+//  src: url('#{$fontsUrl}SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}SourceSansPro-Bold.woff2') format('woff2'),
+//  url('#{$fontsUrl}SourceSansPro-Bold.woff') format('woff'),
+//  url('#{$fontsUrl}SourceSansPro-Bold.ttf') format('truetype'),
+//  url('#{$fontsUrl}SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
+//  font-weight: bold;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Source Sans Pro';
+//  src: url('#{$fontsUrl}SourceSansPro-Light.eot');
+//  src: url('#{$fontsUrl}SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}SourceSansPro-Light.woff2') format('woff2'),
+//  url('#{$fontsUrl}SourceSansPro-Light.woff') format('woff'),
+//  url('#{$fontsUrl}SourceSansPro-Light.ttf') format('truetype'),
+//  url('#{$fontsUrl}SourceSansPro-Light.svg#SourceSansPro-Light') format('svg');
+//  font-weight: 300;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Source Sans Pro';
+//  src: url('#{$fontsUrl}SourceSansPro-ExtraLight.eot');
+//  src: url('#{$fontsUrl}SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}SourceSansPro-ExtraLight.woff2') format('woff2'),
+//  url('#{$fontsUrl}SourceSansPro-ExtraLight.woff') format('woff'),
+//  url('#{$fontsUrl}SourceSansPro-ExtraLight.ttf') format('truetype'),
+//  url('#{$fontsUrl}SourceSansPro-ExtraLight.svg#SourceSansPro-ExtraLight') format('svg');
+//  font-weight: 200;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Source Sans Pro';
+//  src: url('#{$fontsUrl}SourceSansPro-Regular.eot');
+//  src: url('#{$fontsUrl}SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}SourceSansPro-Regular.woff2') format('woff2'),
+//  url('#{$fontsUrl}SourceSansPro-Regular.woff') format('woff'),
+//  url('#{$fontsUrl}SourceSansPro-Regular.ttf') format('truetype'),
+//  url('#{$fontsUrl}SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Source Sans Pro';
+//  src: url('#{$fontsUrl}SourceSansPro-Black.eot');
+//  src: url('#{$fontsUrl}SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}SourceSansPro-Black.woff2') format('woff2'),
+//  url('#{$fontsUrl}SourceSansPro-Black.woff') format('woff'),
+//  url('#{$fontsUrl}SourceSansPro-Black.ttf') format('truetype'),
+//  url('#{$fontsUrl}SourceSansPro-Black.svg#SourceSansPro-Black') format('svg');
+//  font-weight: 900;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Malaga Narrow OT Reg';
+//  src: url('#{$fontsUrl}MalagaNarrowOT-Reg.eot');
+//  src: url('#{$fontsUrl}MalagaNarrowOT-Reg.eot?#iefix') format('embedded-opentype'),
+//  url('#{$fontsUrl}MalagaNarrowOT-Reg.woff2') format('woff2'),
+//  url('#{$fontsUrl}MalagaNarrowOT-Reg.woff') format('woff'),
+//  url('#{$fontsUrl}MalagaNarrowOT-Reg.ttf') format('truetype'),
+//  url('#{$fontsUrl}MalagaNarrowOT-Reg.svg#MalagaNarrowOT-Reg') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//  font-display: swap;
+//}
+
+
 @font-face {
-  font-family: "TitularW00-Black";
-  src: url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.eot");
-  src: url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.woff") format("woff"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/59fc2a88361f7edf2d750209902cfe59.svg#TitularW00-Black") format("svg");
+  font-family:"source-sans-pro";
+  src:url("https://use.typekit.net/af/61f808/00000000000000003b9b3d63/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+  format("woff2"),
+  url("https://use.typekit.net/af/61f808/00000000000000003b9b3d63/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
+  url("https://use.typekit.net/af/61f808/00000000000000003b9b3d63/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:400;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('#{$fontsUrl}SourceSansPro-SemiBold.eot');
-  src: url('#{$fontsUrl}SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}SourceSansPro-SemiBold.woff2') format('woff2'),
-  url('#{$fontsUrl}SourceSansPro-SemiBold.woff') format('woff'),
-  url('#{$fontsUrl}SourceSansPro-SemiBold.ttf') format('truetype'),
-  url('#{$fontsUrl}SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+  font-family:"malaga-narrow";
+  src:url("https://use.typekit.net/af/80e94c/00000000000000003b9adcb3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+  format("woff2"),
+  url("https://use.typekit.net/af/80e94c/00000000000000003b9adcb3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
+  url("https://use.typekit.net/af/80e94c/00000000000000003b9adcb3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:400;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('#{$fontsUrl}SourceSansPro-Bold.eot');
-  src: url('#{$fontsUrl}SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}SourceSansPro-Bold.woff2') format('woff2'),
-  url('#{$fontsUrl}SourceSansPro-Bold.woff') format('woff'),
-  url('#{$fontsUrl}SourceSansPro-Bold.ttf') format('truetype'),
-  url('#{$fontsUrl}SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+  font-family:"titular";
+  src:url("https://use.typekit.net/af/e8da8b/00000000000000003b9b0489/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3")
+  format("woff2"),
+  url("https://use.typekit.net/af/e8da8b/00000000000000003b9b0489/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"),
+  url("https://use.typekit.net/af/e8da8b/00000000000000003b9b0489/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:800;
 }
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('#{$fontsUrl}SourceSansPro-Light.eot');
-  src: url('#{$fontsUrl}SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}SourceSansPro-Light.woff2') format('woff2'),
-  url('#{$fontsUrl}SourceSansPro-Light.woff') format('woff'),
-  url('#{$fontsUrl}SourceSansPro-Light.ttf') format('truetype'),
-  url('#{$fontsUrl}SourceSansPro-Light.svg#SourceSansPro-Light') format('svg');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('#{$fontsUrl}SourceSansPro-ExtraLight.eot');
-  src: url('#{$fontsUrl}SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}SourceSansPro-ExtraLight.woff2') format('woff2'),
-  url('#{$fontsUrl}SourceSansPro-ExtraLight.woff') format('woff'),
-  url('#{$fontsUrl}SourceSansPro-ExtraLight.ttf') format('truetype'),
-  url('#{$fontsUrl}SourceSansPro-ExtraLight.svg#SourceSansPro-ExtraLight') format('svg');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('#{$fontsUrl}SourceSansPro-Regular.eot');
-  src: url('#{$fontsUrl}SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}SourceSansPro-Regular.woff2') format('woff2'),
-  url('#{$fontsUrl}SourceSansPro-Regular.woff') format('woff'),
-  url('#{$fontsUrl}SourceSansPro-Regular.ttf') format('truetype'),
-  url('#{$fontsUrl}SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('#{$fontsUrl}SourceSansPro-Black.eot');
-  src: url('#{$fontsUrl}SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}SourceSansPro-Black.woff2') format('woff2'),
-  url('#{$fontsUrl}SourceSansPro-Black.woff') format('woff'),
-  url('#{$fontsUrl}SourceSansPro-Black.ttf') format('truetype'),
-  url('#{$fontsUrl}SourceSansPro-Black.svg#SourceSansPro-Black') format('svg');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Malaga Narrow OT Reg';
-  src: url('#{$fontsUrl}MalagaNarrowOT-Reg.eot');
-  src: url('#{$fontsUrl}MalagaNarrowOT-Reg.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}MalagaNarrowOT-Reg.woff2') format('woff2'),
-  url('#{$fontsUrl}MalagaNarrowOT-Reg.woff') format('woff'),
-  url('#{$fontsUrl}MalagaNarrowOT-Reg.ttf') format('truetype'),
-  url('#{$fontsUrl}MalagaNarrowOT-Reg.svg#MalagaNarrowOT-Reg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-

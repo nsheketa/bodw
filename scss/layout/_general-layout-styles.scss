@@ -69,6 +69,10 @@
   top: -35px;
   margin-bottom: -35px;
 
+  h1{
+    font-family: $titleFontFamily;
+  }
+
   &--lg {
     position: relative;
   }
