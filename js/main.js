@@ -304,16 +304,29 @@ $(document).ready(function () {
     }
   }
 
+  function setPartnersAd() {
+    const ad = $('.partners-list__aside');
+    const wrapper = $('.partners-list__wrap');
+    if (ad.length) {
+      let wrapperEdge = wrapper.offset().left + wrapper.width();
+      ad.css({
+        left: wrapperEdge - ad.width() + 'px'
+      })
+    } else {
+      return;
+    }
+  }
+
+
   $(window).on('scroll', function () {
     const letters = $(".speakers-list__letters");
-    const parent = $(".speakers-list__outer");
-    let parentTop = parent.offset().top;
-    let parentBottom = parentTop + parent.height() - 100;
-    let scrollTop = $(window).scrollTop();
-
+    const window = $(this);
     if (letters.length) {
-      if (scrollTop > parentTop - 100 && scrollTop < parentBottom) {
-        console.log('fixed')
+      const parent = $(".speakers-list__outer");
+      let parentTop = parent.offset().top;
+      let parentBottom = parentTop + parent.height() - 110;
+      let scrollTop = window.scrollTop();
+      if (scrollTop > parentTop - 110 && scrollTop < parentBottom) {
         letters.addClass('is-fixed');
       } else {
         letters.removeClass('is-fixed');
@@ -323,6 +336,25 @@ $(document).ready(function () {
     }
   })
 
+  $(window).on('scroll', function () {
+    const ad = $('.partners-list__aside');
+    const wrapper = $('.partners-list__wrap');
+    const window = $(this);
+    let scrollTop = window.scrollTop();
+    if ($('.partners-list__aside').length) {
+      let wrapperTop = wrapper.offset().top - 110;
+      let wrapperBottom = wrapperTop + wrapper.height() - window.height() / 2;
+      if (scrollTop > wrapperTop && scrollTop < wrapperBottom) {
+        ad.removeClass('is-not-fixed');
+        ad.addClass('is-fixed');
+      } else {
+        ad.removeClass('is-fixed');
+        ad.addClass('is-not-fixed');
+      }
+    } else {
+      return;
+    }
+  })
 
   /*
   event photos popup
@@ -371,8 +403,9 @@ $(document).ready(function () {
     });
   }
 
-  ///Function calls
+///Function calls
   pinLetters();
+  setPartnersAd();
 
   /* Trigger resize once */
   $(window).resize(function () {
@@ -385,7 +418,9 @@ $(document).ready(function () {
         wWidth = width;
 
         pinLetters();
+        setPartnersAd();
       }
     }
   });
-});
+})
+;

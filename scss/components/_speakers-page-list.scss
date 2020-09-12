@@ -33,6 +33,7 @@
     display: block;
     text-align: center;
     color: currentColor;
+    font-weight: bold;
     text-transform: uppercase;
     width: 20px;
     @include on-event {
